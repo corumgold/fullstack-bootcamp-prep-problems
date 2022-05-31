@@ -18,7 +18,7 @@ function mostVowels(string) {
             mostVowels = words[i];
             mostVowelsCount = vowelCount;
         }
-    } return mostVowels;
+    } return mostVowels.replace(/[\s|\.]+$/i, '')
 }
 
 mostVowels("I love a parade")

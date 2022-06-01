@@ -1,5 +1,4 @@
 function mostVowels(string) {
-    debugger;
     let words = string.split(' ');
     let mostVowels = ''
     let mostVowelsCount = 0;

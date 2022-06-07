@@ -7,7 +7,6 @@
 
 // compareObjects({ name: 'zeke' }, { name: 'zeke', age: 12 }) // -> false
 function compareObjects(obj1, obj2) {
-    debugger
     stringOne = ''
     stringTwo = ''
     for (key in obj1) {
@@ -20,4 +19,4 @@ function compareObjects(obj1, obj2) {
     } else {
         return false;
     }
-} compareObjects({a: 1, b: 2}, {a: 1, b: 3})
+} 

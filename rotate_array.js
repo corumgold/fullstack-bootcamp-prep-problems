@@ -14,12 +14,27 @@
 // You can assume the absolute value of rotateNum will be less than the length of the original array.
 
 function rotateArray(originalArray, rotateNum) {
+    debugger
     let rotatedArray = []
     if (rotateNum === 0) {
         return originalArray;
     } else if (rotateNum > 0) {
         //start with originalArray[originalArray.length-rotateNum]
-        for (let i = 0; i >)
-    }
+        for (let i = originalArray.length - rotateNum; i < originalArray.length; i++) {
+            let element = originalArray[i]
+            rotatedArray.push(element)
+        }
+        for (let i = 0; i < originalArray.length - rotateNum; i++) {
+            rotatedArray.push(originalArray[i]);
+        }
+    } else {
+        for (let i = 0 - rotateNum; i < originalArray.length; i++) {
+            let element = originalArray[i]
+            rotatedArray.push(element)
+        } for (let i = 0; rotatedArray.length < originalArray.length; i++){
+            rotatedArray.push(originalArray[i]);
+        }
+    } return rotatedArray;
 }
 
+rotateArray([1, 2, 3, 4, 5], -1)

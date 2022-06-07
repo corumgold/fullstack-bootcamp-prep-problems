@@ -15,3 +15,10 @@
 //        'Nemo the fish is 5.'
 //        'Punxsutawney Phil the groundhog is 11.']
 //
+
+function zooInventory(arr) {
+    let inventory = [];
+    for (let i = 0; i < arr.length; i++) {
+        inventory.push(`${arr[i][0]} the ${arr[i][1][0]} is ${arr[i][1][1]}.`)
+    } return inventory;
+}

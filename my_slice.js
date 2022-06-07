@@ -18,3 +18,40 @@
 // mySlice([1, 2, 3], -1) // => [3]
 
 // Do not use the built-in .slice array method in your answer. Feel free to use it in all future problems though!
+
+function mySlice(originalArray, startIdx, endIdx) {
+    slicedArray = []
+    if (startIdx === undefined && endIdx === undefined) {
+        return originalArray;
+    } else if (startIdx < 0) {
+        for (let i = 0; i < originalArray.length; i++) {
+            if (i >= (originalArray.length + startIdx)) {
+                slicedArray.push(originalArray[i]);
+            }
+        }
+    } else if (endIdx < 0){
+        for (let i = 0; i < originalArray.length; i++) {
+            if (i >= startIdx && i < endIdx + originalArray.length) {
+                slicedArray.push(originalArray[i]);
+            }
+        }
+    } else if (endIdx === undefined) {
+        for (let i = 0; i < originalArray.length; i++) {
+            if (i >= startIdx) {
+                slicedArray.push(originalArray[i]);
+            }
+        }
+    } else if (startIdx === undefined) {
+        for (let i = 0; i < originalArray.length; i++) {
+            if (i < endIdx) {
+                slicedArray.push(originalArray[i]);
+            }
+        }
+    } else {
+        for (let i = 0; i < originalArray.length; i++) {
+            if (i >= startIdx && i < endIdx) {
+                slicedArray.push(originalArray[i]);
+            }
+        }
+    } return slicedArray
+}

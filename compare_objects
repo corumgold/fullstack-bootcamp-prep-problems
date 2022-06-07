@@ -6,4 +6,18 @@
 // compareObjects({ name: 'nick' }, { name: 'nick' }) // -> true
 
 // compareObjects({ name: 'zeke' }, { name: 'zeke', age: 12 }) // -> false
-
+function compareObjects(obj1, obj2) {
+    debugger
+    stringOne = ''
+    stringTwo = ''
+    for (key in obj1) {
+        stringOne += `${key} is ${obj1[key]}`;
+    }
+    for (key in obj2) {
+        stringTwo += `${key} is ${obj2[key]}`;
+    } if (stringOne === stringTwo) {
+        return true;
+    } else {
+        return false;
+    }
+} compareObjects({a: 1, b: 2}, {a: 1, b: 3})

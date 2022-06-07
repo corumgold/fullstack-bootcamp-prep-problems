@@ -18,3 +18,30 @@
 // myJoin(['hello', undefined, 'world'], '-'); // => "hello--world"
 // Do not use the built-in .join array method in your answer. Feel free to use it in all future problems though!
 
+function myJoin(array, separator) {
+    let string = ""
+    if (separator === undefined) {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === null || array[i] === undefined) {
+                string += ""
+            } else if (i === array.length - 1) {
+                string += array[i];
+            }
+            else {
+                string += array[i] += ","
+            }
+        }
+    } else {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === null || array[i] === undefined) {
+                string += separator
+            }
+            else if (i === array.length - 1) {
+                string += array[i];
+            }
+            else {
+                string += array[i] += separator
+            }
+        }
+    } return string
+}

@@ -40,12 +40,16 @@
 let letters = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' ];
 let leetChars = ['@', '8', '(', '|)', '3', 'ph', 'g', '#','l', '_|', '|<', '1', "|'|'|", '/\/', '0', '|D', '(,)', '|2', '5', '+', '|_|', '|/', "|/|/'",'><', 'j', '2'];
 
-translate('Fullstack')    // => 'ph|_|115+@(|<'
 
 function leetTranslator(string){
-    debugger 
     let leetCodex = {};
      for (let i = 0; i < letters.length; i++){
          leetCodex[letters[i]] = leetChars[i];
-     } return leetCodex
-} leetTranslator("heya")
+     } 
+
+     let newString = ""
+     for (let i = 0; i < string.length; i++){
+         let currentLetter = string[i].toLowerCase();
+         newString += leetCodex[currentLetter];
+     } return newString;
+} 

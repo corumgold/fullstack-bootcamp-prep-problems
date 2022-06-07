@@ -13,3 +13,17 @@
 //        [1],
 //        [1]]
 // */
+
+function removeColumns(originalGrid, numColumns) {
+    debugger;
+    let numColToKeep = originalGrid[0].length - numColumns;
+    let newArray = [];
+    for (let i = 0; i < originalGrid.length; i++) {
+        let row = originalGrid[i]
+        let newRow = [];
+        for (let j = 0; j < numColToKeep; j++) {
+            newRow.push(row[j])
+        } newArray.push(newRow);
+    } return newArray;
+}
+removeColumns([[1, 2, 3], [1, 2, 3]], 1)

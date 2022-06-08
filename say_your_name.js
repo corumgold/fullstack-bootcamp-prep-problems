@@ -7,3 +7,9 @@
 // console.log(you.name); // 'Alyssa'
 // me2.getGreeting(you); // => 'Hi Alyssa, my name is Tarana.'
 
+let me2 = {
+    name: 'Cory',
+    getGreeting: function (you) {
+        return `Hi ${you.name}, my name is ${this.name}.` 
+    }
+}

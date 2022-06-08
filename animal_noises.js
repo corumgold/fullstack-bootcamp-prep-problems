@@ -50,7 +50,6 @@ let animalNoises = [
 ];
 
 function petSounds(animal, country) {
-  debugger;
   let noise;
   let animalCappedPlural = animal.charAt(0).toUpperCase() + animal.slice(1) + "s"
   for (let i = 0; i < animalNoises.length; i++) {
@@ -64,5 +63,3 @@ function petSounds(animal, country) {
     }
   } return `${animalCappedPlural} in ${country} say ${noise}`;
 }
-
-petSounds('cat', "Germany")

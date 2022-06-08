@@ -47,7 +47,6 @@ let classRoom = [
 ];
 
 function attendanceCheck(day) {
-    debugger
     let presentStudents = [];
     for (let i = 0; i < classRoom.length; i++) {
         let studAttendance = classRoom[i];
@@ -69,4 +68,4 @@ function attendanceCheck(day) {
             }
         }
     } return presentStudents;
-} attendanceCheck('Monday')
+} 

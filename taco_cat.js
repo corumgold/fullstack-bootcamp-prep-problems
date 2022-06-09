@@ -31,24 +31,42 @@ let tacoCatInc = {
     cash: 0,
 
     currentInventory: function () {
-        debugger;
         let total = 0
-        for (let key in tacoCatInc) {
-            let product = this[key]
-            for (key in product) {
-                total += product[key].quantity;
-
+        for (let category in tacoCatInc) {
+            if (category === 'cash') {
+                continue;
             }
-        }
+            let items = this[category];
+            for (let itemName in items) {
+                let itemObj = items[itemName];
+                total += itemObj.cost * itemObj.quantity;
+            }
+        } return total
+    },
+
+    sale: function (order) {
+        debugger;
+        let totalPrice = 0
+        for (let category in order) {
+            let choice = order[category];
+            totalPrice += this[category][choice].cost;
+            this[category][choice].quantity--;
+            this.cash += this[category][choice].cost;
+        } return totalPrice
     }
 };
 
-tacoCatInc.currentInventory(); // => 1710
+
+
+
+// tacoCatInc.currentInventory(); // => 1710
 
 let order = {
     gourmetShell: 'hard treat shell',
     gourmetFishFilling: 'salmon'
 };
+
+tacoCatInc.sale(order)
 
 tacoCatInc.sale(order); // => 7
 tacoCatInc.sale(order); // => 7

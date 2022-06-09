@@ -14,5 +14,16 @@
 
 function deeperCopy(array) {
     let copy = [];
-    
+    for (let i = 0; i < array.length; i++) {
+        let element = array[i]
+        if (typeof element !== 'object') {
+            copy.push(element)
+        } else {
+            let arrayception = []
+            for (let j = 0; j < element.length; j++){
+                arrayception.push(element[i]);
+                copy.push(arrayception);
+            }
+        }
+    } return copy;
 }

@@ -7,7 +7,6 @@
 // Do not use the native .reverse() method in your own implementation.
 
 function reverseArray(array){
-    debugger;
     let reversedElements = [];
     let itemsCount = array.length;
     for (let i = 0; i < itemsCount; i++){

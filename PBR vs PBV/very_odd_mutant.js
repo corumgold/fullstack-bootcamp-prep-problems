@@ -11,3 +11,13 @@
 
 // console.log('countReplaced:', countReplaced);
 // // 4 (because 4 even numbers were replaced with 'normie')
+
+function veryOddMutant(numArray) {
+    countReplaced = 0;
+    for (let i = 0; i < numArray.length; i++) {
+        if (numArray[i] % 2 === 0){
+            numArray[i] = 'normie';
+            countReplaced++
+        }
+    } return countReplaced;
+}

@@ -26,3 +26,10 @@
 // // Function complete
 
 // console.log(squareOfFour) // 16
+
+let functionLogger = function (func, arg) {
+    console.log("Function Starting");
+    func(arg);
+    console.log("Function Complete");
+    return func(arg);
+}

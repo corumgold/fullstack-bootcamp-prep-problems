@@ -19,7 +19,6 @@
 // // => Sadie the cat is very special! Layla the cat is very special! Bogie the dog is very special!
 
 function whosASpecial(array) {
-    debugger;
     let specialString = ""
     for (let i = 0; i < array.length; i++) {
         let pet = array[i].name;

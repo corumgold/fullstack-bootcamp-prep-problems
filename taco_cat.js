@@ -8,34 +8,46 @@
 // Besides being a fun challenge, it's intended to show how you can use objects and their methods to store and change state.
 
 let tacoCatInc = {
-  gourmetShell: {
-    'hard treat shell': {cost: 2, quantity: 100},
-    'soft treat shell': {cost: 1.5, quantity: 100}
-  },
+    gourmetShell: {
+        'hard treat shell': { cost: 2, quantity: 100 },
+        'soft treat shell': { cost: 1.5, quantity: 100 }
+    },
 
-  gourmetFishFilling: {
-    'salmon': {cost: 5, quantity: 100},
-    'tuna': {cost: 5.5, quantity: 100},
-    'sardines': {cost: 1.5, quantity: 100}
-  },
+    gourmetFishFilling: {
+        'salmon': { cost: 5, quantity: 100 },
+        'tuna': { cost: 5.5, quantity: 100 },
+        'sardines': { cost: 1.5, quantity: 100 }
+    },
 
-  gourmetVeggie: {
-    'cat grass': {cost: 1, quantity: 100}
-  },
+    gourmetVeggie: {
+        'cat grass': { cost: 1, quantity: 100 }
+    },
 
-  gourmetSeasoning: {
-    'cat nip': {cost: 0.5, quantity: 100},
-    'treat dust': {cost: 0.1, quantity: 100}
-  },
+    gourmetSeasoning: {
+        'cat nip': { cost: 0.5, quantity: 100 },
+        'treat dust': { cost: 0.1, quantity: 100 }
+    },
 
-  cash: 0
+    cash: 0,
+
+    currentInventory: function () {
+        debugger;
+        let total = 0
+        for (let key in tacoCatInc) {
+            let product = this[key]
+            for (key in product) {
+                total += product[key].quantity;
+
+            }
+        }
+    }
 };
 
 tacoCatInc.currentInventory(); // => 1710
 
 let order = {
-  gourmetShell: 'hard treat shell',
-  gourmetFishFilling: 'salmon'
+    gourmetShell: 'hard treat shell',
+    gourmetFishFilling: 'salmon'
 };
 
 tacoCatInc.sale(order); // => 7

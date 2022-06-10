@@ -9,3 +9,13 @@
 // // p
 // // a
 // // h
+
+function backwardString(string) {
+    let lastChar = string[string.length - 1];
+    if (lastChar === string[0]) {
+        console.log(lastChar);
+    } else {
+        console.log(lastChar)
+        backwardString(string.slice(0, string.length - 1))
+    }
+}

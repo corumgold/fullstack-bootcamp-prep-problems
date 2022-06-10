@@ -12,7 +12,14 @@
 // sumFive(10) // => 15;
 
 let partial = function (func, argA) {
-    return function(argB) {
-       return func(argA, argB);
-    } 
+    return function (argB) {
+        return func(argA, argB);
+    }
 }
+
+function summer(a, b) {
+    return a + b
+};
+
+let sumFive = partial(summer, 5);
+sumFive(10) // => 15;

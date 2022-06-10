@@ -11,6 +11,7 @@
 
 function stringify(func) {
     return function () {
+        console.log
         return func().toString(); 
     }
 }

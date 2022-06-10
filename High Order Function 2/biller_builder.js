@@ -9,3 +9,15 @@
 
 // let newJerseyBiller = biller('NJ');
 // newJerseyBiller(100) // => 111.95625 (100 * 1.05 * 1.06625)
+
+let billerBuilder = function (state) {
+    return function (price) {
+        switch (state) {
+            case 'NY': return price *= 1.03 += 1.04;
+                break;
+            case 'NJ': return price *= 1.05 *= 1.06625;
+                break;
+            default: return price;
+        }
+    }
+}

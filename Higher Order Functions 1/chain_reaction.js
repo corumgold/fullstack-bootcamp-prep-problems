@@ -25,8 +25,7 @@
 // chainReaction(0, [addTen, subtractFive, multiplyFive]); // => 25
 // chainReaction(0, [subtractFive, multiplyFive, addTen]); // => -15
 
-function chainReaction(initValue, funcsArray) {
-    debugger
+function chainReaction(initValue, funcsArray) { 
     let total = initValue;
     funcsArray.forEach(func => {
         total = func(total);

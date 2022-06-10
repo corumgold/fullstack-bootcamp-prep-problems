@@ -9,3 +9,9 @@
 
 // let twelvesTable = timesTable(12);
 // twelvesTable(100) // => 1200
+
+function timesTable(num1) {
+    return function (num2) {
+        return num2 * num1;
+    }
+}

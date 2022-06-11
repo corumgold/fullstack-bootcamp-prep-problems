@@ -10,7 +10,18 @@ let puppyFarm = getDogBreeder('Snoopy', 0);
 let rescueShelter = getDogBreeder('Odie', 3);
 
 
-
+function getDogBreeder(defaultName, defaultAge) {
+    return function dogBreeder(name = defaultName, age = defaultAge) {
+        let newDog = {};
+        if (typeof name === 'number') {
+            age = name;
+            name = defaultName
+        }
+        newDog.name = name;
+        newDog.age = age;
+        return newDog;
+    }
+}
 
 
 puppyFarm('Olaf', 3); // => {name: 'Olaf', age: 3};

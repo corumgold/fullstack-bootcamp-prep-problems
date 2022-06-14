@@ -71,20 +71,21 @@ let firstSolve
 //     } return presentStudents;
 // } 
 
-function attendanceCheck(day) {
-    let daysAttendance = []
-    for (let i = 0; i < classRoom.length; i++) {
-        let studentObj = classRoom[i];
-        for (let name in studentObj) {
-            let attendanceArr = studentObj[name];
-            for (let j = 0; j < attendanceArr.length; j++) {
-                let dayObj = attendanceArr[j];
-                if (dayObj[day] === true) {
-                    daysAttendance.push(name);
-                }
-            }
-        }
-    } return daysAttendance
-}
+let secondSolve
+// function attendanceCheck(day) {
+//     let daysAttendance = []
+//     for (let i = 0; i < classRoom.length; i++) {
+//         let studentObj = classRoom[i];
+//         for (let name in studentObj) {
+//             let attendanceArr = studentObj[name];
+//             for (let j = 0; j < attendanceArr.length; j++) {
+//                 let dayObj = attendanceArr[j];
+//                 if (dayObj[day] === true) {
+//                     daysAttendance.push(name);
+//                 }
+//             }
+//         }
+//     } return daysAttendance
+// }
 
 

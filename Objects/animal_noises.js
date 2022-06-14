@@ -49,6 +49,7 @@ let animalNoises = [
   }
 ];
 
+let firstSolve
 // function petSounds(animal, country) {
 //   let noise;
 //   let animalCappedPlural = animal.charAt(0).toUpperCase() + animal.slice(1) + "s"
@@ -64,17 +65,18 @@ let animalNoises = [
 //   } return `${animalCappedPlural} in ${country} say ${noise}`;
 // }
 
-function petSounds(animal, country) {
-  debugger;
-  let animalName = animal.charAt(0).toUpperCase() + animal.slice(1);
-  // let sound = '';
-    for (let i = 0; i < animalNoises.length; i++) {
-      let animalInfo = animalNoises[i];
-      for (let name in animalInfo) {
-        if (name === animal) {
-          return `${animalName}s in ${country} say ${animalInfo[name][country]}`
-        }
-      }
-    }
-}
-petSounds('cat', 'Algeria')
+let secondSolve
+// function petSounds(animal, country) {
+//   debugger;
+//   let animalName = animal.charAt(0).toUpperCase() + animal.slice(1);
+//   // let sound = '';
+//     for (let i = 0; i < animalNoises.length; i++) {
+//       let animalInfo = animalNoises[i];
+//       for (let name in animalInfo) {
+//         if (name === animal) {
+//           return `${animalName}s in ${country} say ${animalInfo[name][country]}`
+//         }
+//       }
+//     }
+// }
+// petSounds('cat', 'Algeria')

@@ -46,26 +46,45 @@ let classRoom = [
     }
 ];
 
+let firstSolve
+// function attendanceCheck(day) {
+//     let presentStudents = [];
+//     for (let i = 0; i < classRoom.length; i++) {
+//         let studAttendance = classRoom[i];
+//         let studentName
+//         for (let key in studAttendance) {
+//             if (typeof key === 'string') {
+//                 studentName = key;
+//             }
+//         }
+//         let studentSchedule = studAttendance[studentName];
+//         for (let i = 0; i < studentSchedule.length; i++) {
+//             let dayChecked = studentSchedule[i];
+//             for (let key in dayChecked) {
+//                 if (key === day) {
+//                     if (dayChecked[key] === true){
+//                         presentStudents.push(studentName);
+//                     }
+//                 }
+//             }
+//         }
+//     } return presentStudents;
+// } 
+
 function attendanceCheck(day) {
-    let presentStudents = [];
+    let daysAttendance = []
     for (let i = 0; i < classRoom.length; i++) {
-        let studAttendance = classRoom[i];
-        let studentName
-        for (let key in studAttendance) {
-            if (typeof key === 'string') {
-                studentName = key;
-            }
-        }
-        let studentSchedule = studAttendance[studentName];
-        for (let i = 0; i < studentSchedule.length; i++) {
-            let dayChecked = studentSchedule[i];
-            for (let key in dayChecked) {
-                if (key === day) {
-                    if (dayChecked[key] === true){
-                        presentStudents.push(studentName);
-                    }
+        let studentObj = classRoom[i];
+        for (let name in studentObj) {
+            let attendanceArr = studentObj[name];
+            for (let j = 0; j < attendanceArr.length; j++) {
+                let dayObj = attendanceArr[j];
+                if (dayObj[day] === true) {
+                    daysAttendance.push(name);
                 }
             }
         }
-    } return presentStudents;
-} 
+    } return daysAttendance
+}
+
+

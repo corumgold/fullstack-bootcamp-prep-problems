@@ -28,11 +28,12 @@ let firstSolve
 //     } return calledFuncs
 // }
 
-function callThemAll(object, value) {
-    let calledFuncs = []
-    for (let key in object) {
-        if (typeof object[key] === 'function') {
-            calledFuncs.push(object[key](value));
-        } 
-    } return calledFuncs;
-}
+let secondSolve
+// function callThemAll(object, value) {
+//     let calledFuncs = []
+//     for (let key in object) {
+//         if (typeof object[key] === 'function') {
+//             calledFuncs.push(object[key](value));
+//         } 
+//     } return calledFuncs;
+// }

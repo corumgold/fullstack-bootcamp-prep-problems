@@ -10,10 +10,21 @@
 //     offspring: []
 // }
 
-// let dollyClone = cloneMachine(dolly);
+let dollyClone = cloneMachine(dolly);
 
 // console.log(dollyClone) // {name: 'DollyClone', species: 'sheep', offspring: []}
 // console.log(dolly) // {name: 'Dolly', species: 'sheep', offspring: ['DollyClone']}
+
+let firstSolve
+// function cloneMachine(animalObj) {
+//     let clone = {
+//         name: `${animalObj.name}Clone`,
+//         species: animalObj.species,
+//         offspring: []
+//     }
+//     animalObj.offspring.push(`${animalObj.name}Clone`)
+//     return clone;
+// }
 
 function cloneMachine(animalObj) {
     let clone = {
@@ -21,7 +32,7 @@ function cloneMachine(animalObj) {
         species: animalObj.species,
         offspring: []
     }
-    animalObj.offspring.push(`${animalObj.name}Clone`)
+    animalObj.offspring.push(clone.name);
     return clone;
 }
 

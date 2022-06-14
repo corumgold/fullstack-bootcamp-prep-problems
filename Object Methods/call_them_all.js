@@ -19,11 +19,20 @@
 
 // callThemAll(addNums, 100); // => [110, 120]
 
+let firstSolve
+// function callThemAll(object, value) {
+//     let calledFuncs = []
+//     for (let key in object) {
+//         if (typeof object[key] === 'function')
+//             calledFuncs.push(object[key](value))
+//     } return calledFuncs
+// }
+
 function callThemAll(object, value) {
     let calledFuncs = []
     for (let key in object) {
-        if (typeof object[key] === 'function')
-            calledFuncs.push(object[key](value))
-    } return calledFuncs
+        if (typeof object[key] === 'function') {
+            calledFuncs.push(object[key](value));
+        } 
+    } return calledFuncs;
 }
-

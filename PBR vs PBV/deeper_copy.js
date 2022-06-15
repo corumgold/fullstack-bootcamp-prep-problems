@@ -29,17 +29,18 @@ let firstSolve
 //     } return copy;
 // }
 
-function deeperCopy(arr) {
-    let copy = [];
-    for (let i = 0; i < arr.length; i++) {
-        let element = arr[i];
-        if (Array.isArray(element)) {
-            copy[i] = [];
-            for (let j = 0; j < element.length; j++) {
-                copy[i].push(element[j]);
-            }
-        } else {
-            copy.push(element);
-        }
-    } return copy;
-}
+let secondSolve
+// function deeperCopy(arr) {
+//     let copy = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         let element = arr[i];
+//         if (Array.isArray(element)) {
+//             copy[i] = [];
+//             for (let j = 0; j < element.length; j++) {
+//                 copy[i].push(element[j]);
+//             }
+//         } else {
+//             copy.push(element);
+//         }
+//     } return copy;
+// }

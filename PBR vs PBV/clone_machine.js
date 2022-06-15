@@ -26,13 +26,14 @@ let firstSolve
 //     return clone;
 // }
 
-function cloneMachine(animalObj) {
-    let clone = {
-        name: `${animalObj.name}Clone`,
-        species: animalObj.species,
-        offspring: []
-    }
-    animalObj.offspring.push(clone.name);
-    return clone;
-}
+let secondSolve
+// function cloneMachine(animalObj) {
+//     let clone = {
+//         name: `${animalObj.name}Clone`,
+//         species: animalObj.species,
+//         offspring: []
+//     }
+//     animalObj.offspring.push(clone.name);
+//     return clone;
+// }
 

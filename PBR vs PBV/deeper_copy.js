@@ -12,18 +12,34 @@
 
 // console.log(myArray); // [1, [2, 3, 4]]
 
-function deeperCopy(array) {
+let firstSolve
+// function deeperCopy(array) {
+//     let copy = [];
+//     for (let i = 0; i < array.length; i++) {
+//         let element = array[i]
+//         if (typeof element !== 'object') {
+//             copy.push(element)
+//         } else {
+//             let arrayception = []
+//             for (let j = 0; j < element.length; j++){
+//                 arrayception.push(element[i]);
+//                 copy.push(arrayception);
+//             }
+//         }
+//     } return copy;
+// }
+
+function deeperCopy(arr) {
     let copy = [];
-    for (let i = 0; i < array.length; i++) {
-        let element = array[i]
-        if (typeof element !== 'object') {
-            copy.push(element)
-        } else {
-            let arrayception = []
-            for (let j = 0; j < element.length; j++){
-                arrayception.push(element[i]);
-                copy.push(arrayception);
+    for (let i = 0; i < arr.length; i++) {
+        let element = arr[i];
+        if (Array.isArray(element)) {
+            copy[i] = [];
+            for (let j = 0; j < element.length; j++) {
+                copy[i].push(element[j]);
             }
+        } else {
+            copy.push(element);
         }
     } return copy;
 }

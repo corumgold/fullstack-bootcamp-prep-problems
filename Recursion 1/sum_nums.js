@@ -2,7 +2,6 @@
 // You can assume that num will be greater than 1. Use recursion.
 
 function sumNums(num) {
-    debugger;
     if (num === 1) {
         return 1;
     }

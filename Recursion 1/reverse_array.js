@@ -1,7 +1,6 @@
 // Write a function, reverseArray, that accepts an array as an argument and returns a reversed copy of that array. Use recursion.
 
 function reverseArray(arr) {
-    debugger;
     let lastEle = arr[arr.length - 1];
     if (arr.length === 1) {
         return lastEle;

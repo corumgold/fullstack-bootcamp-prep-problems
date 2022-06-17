@@ -21,14 +21,13 @@ let firstSolve
 //     }
 // }
 
-function backwardString(string) {
-    let lastChar = string[string.length - 1]
-    if (string.length === 1) {
-        console.log(lastChar)
-    } else {
-        console.log(lastChar);
-        backwardString(string.slice(0, string.length - 1));
-    }
-}
-
-backwardString("Heya")
+let SecondSolve
+// function backwardString(string) {
+//     let lastChar = string[string.length - 1]
+//     if (string.length === 1) {
+//         console.log(lastChar)
+//     } else {
+//         console.log(lastChar);
+//         backwardString(string.slice(0, string.length - 1));
+//     }
+// }

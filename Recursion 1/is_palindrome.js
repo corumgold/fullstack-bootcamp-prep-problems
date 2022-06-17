@@ -10,15 +10,14 @@ function isPalindrome(str) {
     let firstChar = smallStr[0];
     let lastChar = smallStr[smallStr.length - 1]
 
-    if (smallStr.length === 1 || (smallStr.length === 2 && firstChar === lastChar)) return;
+    if (smallStr.length === 1 || (smallStr.length === 2 && firstChar === lastChar)) return true;
 
     if (firstChar === lastChar) {
         let choppedStr = smallStr.slice(1, smallStr.length - 1);
-        isPalindrome(choppedStr);
+        return isPalindrome(choppedStr);
     } else {
-        return false;
+        return false
     }
-    return true;
 }
 
 

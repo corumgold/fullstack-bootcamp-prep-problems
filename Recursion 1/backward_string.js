@@ -10,12 +10,25 @@
 // // a
 // // h
 
+let firstSolve
+// function backwardString(string) {
+//     let lastChar = string[string.length - 1];
+//     if (lastChar === string[0]) {
+//         console.log(lastChar);
+//     } else {
+//         console.log(lastChar)
+//         backwardString(string.slice(0, string.length - 1))
+//     }
+// }
+
 function backwardString(string) {
-    let lastChar = string[string.length - 1];
-    if (lastChar === string[0]) {
-        console.log(lastChar);
-    } else {
+    let lastChar = string[string.length - 1]
+    if (string.length === 1) {
         console.log(lastChar)
-        backwardString(string.slice(0, string.length - 1))
+    } else {
+        console.log(lastChar);
+        backwardString(string.slice(0, string.length - 1));
     }
 }
+
+backwardString("Heya")

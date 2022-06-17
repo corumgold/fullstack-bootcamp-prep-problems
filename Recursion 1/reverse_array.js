@@ -6,7 +6,7 @@ function reverseArray(arr) {
     if (arr.length === 1) {
         return lastEle;
     } else {
-        return [lastEle].concat(reverseArray(arr.splice(0, arr.length - 1)));
+        return [lastEle].concat(reverseArray(arr.slice(0, - 1))); //slice doesn't modify the original array
     }
 }
 

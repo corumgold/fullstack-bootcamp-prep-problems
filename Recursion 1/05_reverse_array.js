@@ -1,6 +1,6 @@
 // Write a function, reverseArray, that accepts an array as an argument and returns a reversed copy of that array. Use recursion.
 
-let solveCount = 1;
+let solveCount = 2;
 
 const reverseArray = (arr) => {
     if (arr.length === 1) {

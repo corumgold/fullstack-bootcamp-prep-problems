@@ -8,13 +8,13 @@
 let systems = {
     power: {
         batteries: true,
-        solarCells: true,
+        solarCells: false,
         generator: true,
         fuelCells: true
     },
     telecoms: {
         antennas: {
-            highGain: true,
+            highGain: false,
             mediumGain: true,
             lowGain: true
         },
@@ -43,8 +43,18 @@ let systems = {
     }
 };
 
+let solveCount = 1
+
 function allSystemsGo(obj) {
-    
+    debugger;
+    for (let key in obj) {
+        let system = obj[key];
+        if (typeof system === 'object') {
+            let subSystem = allSystemsGo(system);
+            if (!subSystem) return false;
+        } 
+        if (!system) return false;
+    } return true;
 }
 
 allSystemsGo(systems); // => false

@@ -1,12 +1,14 @@
 // Write a function, reverseArray, that accepts an array as an argument and returns a reversed copy of that array. Use recursion.
 
-function reverseArray(arr) {
-    let lastEle = arr[arr.length - 1];
+let solveCount = 1;
+
+const reverseArray = (arr) => {
     if (arr.length === 1) {
-        return lastEle;
-    } else {
-        return [lastEle].concat(reverseArray(arr.slice(0, - 1))); //slice doesn't modify the original array
+        return arr[0];
     }
+
+    let lastEle = arr[arr.length - 1];
+    return [lastEle].concat(reverseArray(arr.slice(0, arr.length - 1)));
 }
 
 let arr = [1, 2, 3, 4]

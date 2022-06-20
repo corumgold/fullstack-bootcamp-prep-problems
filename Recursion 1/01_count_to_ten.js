@@ -17,24 +17,14 @@
 // // 9
 // // 10
 
-let firstSolve
-// function countToTen(num) {
-//     if (num === 10) {
-//         console.log(num);
-//     }
-//     else {
-//         console.log(num);
-//         countToTen(num + 1)
-//     }
-// }
+let solveCount = 3
 
 function countToTen(num) {
-    if (num > 10) {
-        return
+    if (num === 10) console.log(num);
+    else {
+        console.log(num);
+        countToTen(num + 1)
     }
-
-    console.log(num);
-    countToTen(num + 1)
 }
 
 countToTen(1);

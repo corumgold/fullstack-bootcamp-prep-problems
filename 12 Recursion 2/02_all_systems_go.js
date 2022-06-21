@@ -46,7 +46,6 @@ let systems = {
 let solveCount = 2
 
 function allSystemsGo(obj) {
-    debugger
     for (let system in obj) {
         let subsystem = obj[system]
         if (typeof subsystem === 'object') {

@@ -1,23 +1,18 @@
 // Write a function, theTruthCounts, that accepts a multi-dimensional array of values as argument.
 // theTruthCounts should return the count of all truthy values inside the multidimensional array.
 
-let solveCount = 1
+let solveCount = 2
 
 const theTruthCounts = (arr) => {
-    //create a counter for the truths
+    debugger
     let truthCounter = 0;
     for (let i = 0; i < arr.length; i++) {
         let element = arr[i];
-    //if the element is an array, loop through that
         if (Array.isArray(element)) {
-    //add the return counter to the main counter
-           truthCounter += theTruthCounts(element);
+            truthCounter += theTruthCounts(element);
         }
-    //if the element is just a value, see if it's truthy and if so, add it to the truth counter;
-        else if (element) {
-            truthCounter++
-        }
-    } return truthCounter
+        else if (element) truthCounter++;
+    } return truthCounter;
 }
 
 theTruthCounts([[0], [true], [10]])

@@ -8,7 +8,7 @@
 let systems = {
     power: {
         batteries: true,
-        solarCells: false,
+        solarCells: true,
         generator: true,
         fuelCells: true
     },
@@ -43,17 +43,22 @@ let systems = {
     }
 };
 
-let solveCount = 1
+let solveCount = 2
 
 function allSystemsGo(obj) {
-    debugger;
-    for (let key in obj) {
-        let system = obj[key];
-        if (typeof system === 'object') {
-            let subSystem = allSystemsGo(system);
-            if (!subSystem) return false;
-        } 
-        if (!system) return false;
+    debugger
+    for (let system in obj) {
+        let subsystem = obj[system]
+        if (typeof subsystem === 'object') {
+            //assign the recursive run to a variable so we can check if THAT'S true or not
+            let subsystemsGo = allSystemsGo(subsystem);
+            if (!subsystemsGo) {
+                return false;
+            }
+        }
+        else if (!subsystem) {
+            return false;
+        }
     } return true;
 }
 

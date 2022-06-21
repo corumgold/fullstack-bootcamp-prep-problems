@@ -11,22 +11,22 @@ let family = {
   }
 };
 
-let solveCount = 1
+let solveCount = 2
 
-const getLongestName = (obj) => {
-  let longName = "";
-  for (let name in obj) {
-    if (name.length > longName.length) {
-      longName = name;
+const getLongestName = (people) => {
+  debugger;
+  let longestName = "";
+  for (let person in people) {
+    if (person.length > longestName.length) {
+      longestName = person;
     }
-    let person = obj[name]
-    if (person === null) {
-      continue;
+    if (typeof people[person] === "object") {
+      let children = getLongestName(people[person]);
+      if (children.length > longestName.length) {
+        longestName = children
+      }
     }
-    if (typeof person === 'object') {
-      return getLongestName(person);
-    }
-  }
+  } return longestName;
 }
 
 getLongestName(family); // => 'Sir Paddington the Fourth, of the county Wilstonshire'

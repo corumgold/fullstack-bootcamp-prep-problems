@@ -12,7 +12,7 @@
 // [1, 2, 3],
 // [1, 2, 3]]
 
-let solveCount = 1;
+let solveCount = 2;
 
 function makeGrid(numColumns, numRows) {
     debugger;

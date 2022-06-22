@@ -4,29 +4,20 @@
 
 arrayFlattener([1, [2, 3], 4]); // => [1, 2, 3, 4]
 
-// function arrayFlattener(arr) {
-//     let newArray = []
-//     for (let i = 0; i < arr.length; i++) {
-//         let element = arr[i]
-//         if (Array.isArray(element)) {
-//             for (let j = 0; j < element.length; j++) {
-//                 newArray.push(element[j]);
-//             }
-//         } else {
-//             newArray.push(element)
-//         }
-//     } return newArray;
-// }
+let solveCount = 3;
 
-function arrayFlattener(arr) {
-    let newArray = [];
+const arrayFlattener = (arr) => {
+    let newArr = [];
     for (let i = 0; i < arr.length; i++) {
         let element = arr[i];
-        if (typeof element === 'object')
-        for (let j = 0; j < element.length; j++) {
-            newArray.push(element[j]);
-        } else {
-            newArray.push(element);
+        if (Array.isArray(element)) {
+            for (let j = 0; j < element.length; j++) {
+                let nextEl = element[j];
+                newArr.push(nextEl);
+            }
         }
-    } return newArray;
+        else {
+            newArr.push(element);
+        }
+    } return newArr;
 }

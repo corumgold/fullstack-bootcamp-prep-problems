@@ -22,7 +22,7 @@ const searchParty = (human, world) => {
       }
     }
     //if the value is an array, it's a group of people
-    if (Array.isArray(value)) {
+    else if (Array.isArray(value)) {
       let people = value;
       //if the person we're looking for is in that group, return the place they're in
       if (people.includes(human)) {

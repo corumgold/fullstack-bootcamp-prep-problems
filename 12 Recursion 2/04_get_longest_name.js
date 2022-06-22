@@ -14,7 +14,6 @@ let family = {
 let solveCount = 2
 
 const getLongestName = (people) => {
-  debugger;
   let longestName = "";
   for (let person in people) {
     if (person.length > longestName.length) {

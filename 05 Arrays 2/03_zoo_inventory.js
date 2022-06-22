@@ -4,11 +4,11 @@
 // Hint: nested for-loops are not necessary to complete this problem. 
 // This would be a great time to use template literals, also known as string interpolation.
 
-// let myZoo = [
-//   ['King Kong', ['gorilla', 42]],
-//   ['Nemo', ['fish', 5]],
-//   ['Punxsutawney Phil', ['groundhog', 11]]
-// ];
+let myZoo = [
+  ['King Kong', ['gorilla', 42]],
+  ['Nemo', ['fish', 5]],
+  ['Punxsutawney Phil', ['groundhog', 11]]
+];
 
 // zooInventory(myZoo);
 // ['King Kong the gorilla is 42.',
@@ -16,9 +16,14 @@
 //        'Punxsutawney Phil the groundhog is 11.']
 //
 
-function zooInventory(arr) {
-    let inventory = [];
+let solveCount = 2;
+
+const zooInventory = (arr) => {
+    let zooArr = [];
     for (let i = 0; i < arr.length; i++) {
-        inventory.push(`${arr[i][0]} the ${arr[i][1][0]} is ${arr[i][1][1]}.`)
-    } return inventory;
+        zooArr.push(`${arr[i][0]} the ${arr[i][1][0]} is ${arr[i][1][1]}.`)
+    }
+    return zooArr;
 }
+
+zooInventory(myZoo)

@@ -12,12 +12,18 @@
 // [1, 2, 3],
 // [1, 2, 3]]
 
+let solveCount = 1;
+
 function makeGrid(numColumns, numRows) {
-    let grid = [];
+    debugger;
+    let grid = []
     for (let i = 0; i < numRows; i++) {
         let row = [];
         for (let j = 1; j <= numColumns; j++) {
             row.push(j);
-        } grid.push(row)
+        }
+        grid.push(row);
     } return grid;
 }
+
+makeGrid(3, 4);

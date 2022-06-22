@@ -3,10 +3,6 @@
 // Using the globally-defined animalNoises array, petSounds should return a sentence 
 // that explains which sound the animal makes in the given country.
 
-// petSounds('dog', 'Iceland'); // => Dogs in Iceland say Voff voff!
-
-// petSounds('cat', 'Korea'); // => Cats in Korea say Nyaong!
-
 let animalNoises = [
   {
     'dog': {
@@ -49,34 +45,22 @@ let animalNoises = [
   }
 ];
 
-let firstSolve
-// function petSounds(animal, country) {
-//   let noise;
-//   let animalCappedPlural = animal.charAt(0).toUpperCase() + animal.slice(1) + "s"
-//   for (let i = 0; i < animalNoises.length; i++) {
-//     let currentAnimal = animalNoises[i];
-//     for (let key in currentAnimal) {
-//       if (key === animal) {
-//         noise = animalNoises[i][key][country]
-//       } else {
-//         continue
-//       }
-//     }
-//   } return `${animalCappedPlural} in ${country} say ${noise}`;
-// }
+let solveCount = 3;
 
-let secondSolve
-// function petSounds(animal, country) {
-//   debugger;
-//   let animalName = animal.charAt(0).toUpperCase() + animal.slice(1);
-//   // let sound = '';
-//     for (let i = 0; i < animalNoises.length; i++) {
-//       let animalInfo = animalNoises[i];
-//       for (let name in animalInfo) {
-//         if (name === animal) {
-//           return `${animalName}s in ${country} say ${animalInfo[name][country]}`
-//         }
-//       }
-//     }
-// }
-// petSounds('cat', 'Algeria')
+function petSounds(animal, country) {
+  let cappedAnimal = animal.slice(0, 1).toUpperCase() + animal.slice(1);
+  //look through all of the animal to get the object that matches our animal.
+  for (let i = 0; i < animalNoises.length; i++) {
+    for (let creature in animalNoises[i])
+      if (creature === animal) {
+        let animalObj = animalNoises[i];
+        //pick out the sounds object from our animal...
+        let soundsObj = animalObj[animal]
+        //pick out the animal noise from the sounds object and return it as a sentence
+        return `${cappedAnimal}s in ${country} say ${soundsObj[country]}`;
+      }
+  }
+}
+
+// petSounds('dog', 'Iceland'); // => Dogs in Iceland say Voff voff!
+petSounds('cat', 'Korea'); // => Cats in Korea say Nyaong!

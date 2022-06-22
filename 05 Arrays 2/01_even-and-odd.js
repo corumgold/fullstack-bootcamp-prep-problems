@@ -6,28 +6,18 @@
 
 evenAndOdd([1, 2, 3, 4, 5, 6]); // => [[ 2 ,4, 6 ], [ 1, 3, 5 ]]
 
-// function evenAndOdd(arr){
-//     let evens = [];
-//     let odds = [];
-//     let evensAndOdds = []
-//     for (let i = 0; i < arr.length; i++){
-//         if (arr[i]%2 === 0){
-//             evens.push(arr[i])
-//         } else {
-//             odds.push(arr[i]);
-//         }
-//     } evensAndOdds.push(evens, odds);
-//     return evensAndOdds;
-//   }
+let solveCount = 3;
 
 function evenAndOdd(arr) {
-    let newArray = [[], []]
+    let evens = [];
+    let odds = [];
     for (let i = 0; i < arr.length; i++) {
         let num = arr[i];
         if (num % 2 === 0) {
-            newArray[0].push(num);
-        } else {
-            newArray[1].push(num);
+            evens.push(num);
+        } 
+        else {
+            odds.push(num);
         }
-    } return newArray
+    } return [evens, odds]
 }

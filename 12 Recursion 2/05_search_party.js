@@ -9,6 +9,8 @@
 // Search through world for name. If name exists in world, return an array with directions. 
 // Return null if you can't find name.
 
+let solveCount = 1
+
 const searchParty = (human, world) => {
   debugger;
   for (let key in world) {

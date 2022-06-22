@@ -21,14 +21,14 @@ let transactions = [
     }
 ];
 
-
+let solveCount = 2;
 
 function lastFridayNight(transactions) {
     let total = 0;
     for (let i = 0; i < transactions.length; i++) {
-        let transaction = transactions[i];
-        total += transaction.amount;
-    } return total;
+        let transObj = transactions[i];
+        total += transObj.amount;
+    }
+    return total;
 }
 
-lastFridayNight(transactions) // => 10512

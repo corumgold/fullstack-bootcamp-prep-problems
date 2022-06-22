@@ -3,13 +3,16 @@
 
 // frequencyAnalysis('abca'); // => {a: 2, b: 1, c: 1}
 
-function frequencyAnalysis(string) {
-    let frequencyObj = {}
-    for (let i = 0; i < string.length; i++) {
-        if (frequencyObj[string[i]] === undefined) {
-            frequencyObj[string[i]] = 1
+let solveCount = 2;
+
+function frequencyAnalysis(str) {
+    let freqObj = {};
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        if (!freqObj[char]) {
+            freqObj[char] = 1;
         } else {
-            frequencyObj[string[i]] ++
+            freqObj[char]++
         }
-    } return frequencyObj;
-} 
+    } return freqObj
+}

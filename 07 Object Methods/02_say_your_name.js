@@ -7,9 +7,9 @@
 // console.log(you.name); // 'Alyssa'
 // me2.getGreeting(you); // => 'Hi Alyssa, my name is Tarana.'
 
+let solveCount = 2;
+
 let me2 = {
-    name: 'Cory',
-    getGreeting: function (you) {
-        return `Hi ${you.name}, my name is ${this.name}.` 
-    }
+    name: "Cory",
+    getGreeting: (you) => { return `Hi ${you.name}, my name is ${me2.name}.` }
 }

@@ -8,23 +8,27 @@
 
 // The clear method should reset the board to all nulls.
 
+let solveCount = 1;
+
 let ticTacToe = {
-    board:
-        [[null, null, null],
+    board: [
         [null, null, null],
-        [null, null, null]],
-    move: function (char, row, column) {
-        if (!this.board[row][column]) {
-            this.board[row][column] = char;
-        }
-        return this.board
+        [null, null, null],
+        [null, null, null]
+    ],
+
+    move: (char, row, col) => {
+        let space = this.board[row][col];
+        if (!space) {
+            space = char;
+        };
+        return this.board;
     },
-    clear: function () {
-        this.board =
-            [[null, null, null],
-            [null, null, null],
-            [null, null, null]]
-        return this.board
+    clear: () => {
+        this.board = [[null, null, null],
+        [null, null, null],
+        [null, null, null]];
+        return this.board;
     }
 }
 

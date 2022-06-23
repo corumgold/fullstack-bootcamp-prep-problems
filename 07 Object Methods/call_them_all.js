@@ -5,35 +5,28 @@
 // callThemAll should return an array with all of the returned values from each method invocation. 
 // The order of the elements in the returned array does not matter.
 
-// let addsNums = {
-//   addTen: function(num) {
-//     return num + 10;
-//   },
+let addsNums = {
+  addTen: function(num) {
+    return num + 10;
+  },
 
-//   addTwenty: function(num) {
-//     return num + 20;
-//   },
+  addTwenty: function(num) {
+    return num + 20;
+  },
 
-//   someProperty: 'value'
-// };
+  someProperty: 'value'
+};
+
+let solveCount = 3;
+
+function callThemAll(object, value) {
+    let calledArr = []
+    for (let key in object) {
+        if (typeof object[key] === "function") {
+            calledArr.push(object[key](value));
+        }
+    } return calledArr;
+}
 
 // callThemAll(addNums, 100); // => [110, 120]
 
-let firstSolve
-// function callThemAll(object, value) {
-//     let calledFuncs = []
-//     for (let key in object) {
-//         if (typeof object[key] === 'function')
-//             calledFuncs.push(object[key](value))
-//     } return calledFuncs
-// }
-
-let secondSolve
-// function callThemAll(object, value) {
-//     let calledFuncs = []
-//     for (let key in object) {
-//         if (typeof object[key] === 'function') {
-//             calledFuncs.push(object[key](value));
-//         } 
-//     } return calledFuncs;
-// }

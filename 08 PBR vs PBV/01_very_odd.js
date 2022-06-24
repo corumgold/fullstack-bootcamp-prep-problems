@@ -8,11 +8,13 @@
 // console.log('oddNums:', oddNums); // [1, 3, 5, 7];
 // console.log('allTheNums:', allTheNums); // [1, 2, 3, 4, 5, 6, 7, 8]
 
-function veryOdd(numArr) {
-    let oddArr = [];
-    for (let i = 0; i < numArr.length; i++) {
-        if (numArr[i] % 2 !== 0) {
-            oddArr.push(numArr[i]);
+let solveCount = 2;
+
+function veryOdd(arr) {
+    let oddArr = []
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 1) {
+            oddArr.push(arr[i]);
         }
-    } return oddArr
+    } return oddArr;
 }

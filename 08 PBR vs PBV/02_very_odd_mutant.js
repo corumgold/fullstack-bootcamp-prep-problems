@@ -3,21 +3,23 @@
 
 // veryOddMutant should return a count of the number of even numbers it replaced.
 
-// let allTheNums = [1, 2, 3, 4, 5, 6, 7, 8];
-// let countReplaced = veryOddMutant(allTheNums);
-
 // console.log('allTheNums:', allTheNums);
 // // [1, 'normie', 3, 'normie', 5, 'normie', 7, 'normie'];
 
 // console.log('countReplaced:', countReplaced);
 // // 4 (because 4 even numbers were replaced with 'normie')
 
+let solveCount = 2;
+
 function veryOddMutant(numArray) {
-    countReplaced = 0;
+    changeCount = 0
     for (let i = 0; i < numArray.length; i++) {
-        if (numArray[i] % 2 === 0){
-            numArray[i] = 'normie';
-            countReplaced++
+        if (numArray[i] % 2 === 0) {
+            numArray.splice(i, 1, "normie");
+            changeCount++
         }
-    } return countReplaced;
+    } return changeCount
 }
+
+let allTheNums = [1, 2, 3, 4, 5, 6, 7, 8];
+let countReplaced = veryOddMutant(allTheNums);

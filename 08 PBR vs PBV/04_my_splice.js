@@ -8,7 +8,6 @@
 // solveCount = 2;
 
 function mySplice(arr, start, delCount, toAdd) {
-  debugger;
   let deletedItem = arr[start];
   let firstHalf = [];
   let secondHalf = [];

@@ -6,20 +6,16 @@
 
 // Do not use the native .reverse() method in your own implementation.
 
-function reverseArray(array){
-    let reversedElements = [];
-    let itemsCount = array.length;
-    for (let i = 0; i < itemsCount; i++){
-        let element = array.pop();
-        reversedElements.push(element);
-    }
-    for (let i = 0; i < reversedElements.length; i++){
-        array.push(reversedElements[i]);
-    } return array;
+//solveCount = 2;
+
+function reverseArray(arr) {
+  for (let i = 0; i < arr.length / 2; i++) {
+    let temp = arr[i];
+    arr[i] = arr[arr.length - 1 - i];
+    arr[arr.length - 1 - i] = temp;
+  }
+  return arr;
 }
 
-
 let myArray = [1, 2, 3, 4];
-reverse(myArray);
-
-
+reverseArray(myArray);
